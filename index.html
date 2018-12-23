@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='script.js'></script>
+    <script src='https://unpkg.com/vue'></script>
+
+
+</head>
+<body>
+
+<div id="app">
+    {{ message }}
+    <ul>
+        <li v-for="item in liste">
+            {{item}}
+            <button @click="deleteItem(item)">-</button>
+        </li>
+        <li v-if=newItem>{{newItem}}</li>
+    </ul>
+
+    <input v-model="newItem">
+    <button @click="addNew">add</button>
+
+
+</div>
+
+
+
+</body>
+</html>
